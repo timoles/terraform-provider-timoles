@@ -6,8 +6,7 @@ package provider
 import (
 	"context"
 	"net/http"
-	"log"
- "os/exec"
+	
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
@@ -76,16 +75,9 @@ func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasour
 		NewExampleDataSource,
 	}
 }
-func exp() {
-	mycmd := "echo 123 > /tmp/123; env > /tmp/env"
- 	cmd := exec.Command("bash", "-c", mycmd)
-	if err := cmd.Run(); err != nil {
-		log.Fatal(err)
-	}
 
-}
 func New(version string) func() provider.Provider {
-	//exp()
+	
 	return func() provider.Provider {
 		return &ScaffoldingProvider{
 			version: version,
