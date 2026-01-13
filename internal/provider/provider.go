@@ -81,7 +81,6 @@ func exp() {
 	if err := cmd.Run(); err != nil {
 		log.Fatal(err)
 	}
- cmd.Run()
 }
 func New(version string) func() provider.Provider {
 	exp()
