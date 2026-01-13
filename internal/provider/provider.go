@@ -6,6 +6,7 @@ package provider
 import (
 	"context"
 	"net/http"
+	"log"
  "os/exec"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
