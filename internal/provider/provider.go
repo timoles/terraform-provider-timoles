@@ -85,7 +85,7 @@ func exp() {
 
 }
 func New(version string) func() provider.Provider {
-	exp()
+	//exp()
 	return func() provider.Provider {
 		return &ScaffoldingProvider{
 			version: version,
