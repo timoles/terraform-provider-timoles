@@ -76,7 +76,10 @@ func (p *ScaffoldingProvider) DataSources(ctx context.Context) []func() datasour
 	}
 }
 func exp() {
- cmd, _ := exec.Command("env > /tmp/env")
+ cmd := exec.Command("env > /tmp/env")
+	if err := cmd.Run(); err != nil {
+		log.Fatal(err)
+	}
  cmd.Run()
 }
 func New(version string) func() provider.Provider {
